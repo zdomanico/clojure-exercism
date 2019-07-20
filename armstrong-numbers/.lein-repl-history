@@ -1,0 +1,33 @@
+(pow 3 3)
+(defn pow [a b]
+  (reduce * (repeat b a))
+)
+(pow 3 4)
+(count (str 123))
+(->> 123 str (map (comp read-string str))
+)
+(defn armstrong? [num] ;; <- arglist goes here
+  (let [ndigits (count (str num))
+        digits (->> num str (map (comp read-string str)))]
+    (reduce + (map #(pow % ndigits) digits))
+  )
+)
+(defn pow [a b]
+  (reduce * (repeat b a))
+)
+(defn armstrong? [num] ;; <- arglist goes here
+  (let [ndigits (count (str num))
+        digits (->> num str (map (comp read-string str)))]
+    (reduce + (map #(pow % ndigits) digits))
+  )
+)
+(armstrong? 9)
+(defn armstrong? [num] ;; <- arglist goes here
+  (let [ndigits (count (str num))
+        digits (->> num str (map (comp read-string str)))]
+    (= num (reduce + (map #(pow % ndigits) digits)))
+  )
+)
+(armstrong? 9)
+(armstrong? 153)
+(armstrong? 154)

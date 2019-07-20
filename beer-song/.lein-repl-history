@@ -1,0 +1,157 @@
+(defn verse
+  "Returns the nth verse of the song."
+  [num]
+  (let [base (str num " bottles of beer on the wall, " num " bottles of beer.\n" )]
+    (if (= num 0)
+      (str "No more bottles of beer on the wall, no more bottles of beer.\n"
+        "Go to the store and buy some more, 99 bottles of beer on the wall.\n")
+      (if (= num 1)
+        (str base "no bottles of beer on the wall.\n")
+        (str base (dec num) " bottles of beer on the wall.\n")
+      )
+    )
+  )
+)
+(defn sing
+  "Given a start and an optional end, returns all verses in this interval. If
+  end is not given, the whole song from start is sung."
+  ([start]
+    (sing start end)
+  )
+  ([start end]
+    (map print (map verse (reverse (range end start))))
+  )
+)
+(defn sing
+  "Given a start and an optional end, returns all verses in this interval. If
+  end is not given, the whole song from start is sung."
+  ([start]
+    (sing start end)
+  )
+  ([start end]
+    (map print (map verse (reverse (range end start))))
+  )
+)
+(defn sing
+  "Given a start and an optional end, returns all verses in this interval. If
+  end is not given, the whole song from start is sung."
+  ([start]
+    (sing start end)
+  )
+  ([start end]
+    (map verse (reverse (range end start)))
+  )
+)
+(range 50 40)
+(range 30  40)
+(reverse (range 30  40))
+(defn verse
+  "Returns the nth verse of the song."
+  [num]
+  (let [base (str num " bottles of beer on the wall, " num " bottles of beer.\n" )]
+    (if (= num 0)
+      (str "No more bottles of beer on the wall, no more bottles of beer.\n"
+        "Go to the store and buy some more, 99 bottles of beer on the wall.\n")
+      (if (= num 1)
+        (str base "no bottles of beer on the wall.\n")
+        (str base (dec num) " bottles of beer on the wall.\n")
+      )
+    )
+  )
+)
+(defn sing
+  "Given a start and an optional end, returns all verses in this interval. If
+  end is not given, the whole song from start is sung."
+  ([start]
+    (sing start end)
+  )
+  ([start end]
+    (map verse (reverse (range end (inc start))))
+  )
+)
+(defn sing
+  "Given a start and an optional end, returns all verses in this interval. If
+  end is not given, the whole song from start is sung."
+  ([start]
+    (sing start 0)
+  )
+  ([start end]
+    (map verse (reverse (range end (inc start))))
+  )
+)
+(sing 3)
+(defn sing
+  "Given a start and an optional end, returns all verses in this interval. If
+  end is not given, the whole song from start is sung."
+  ([start]
+    (sing start 0)
+  )
+  ([start end]
+    (map print (map verse (reverse (range end (inc start)))))
+  )
+)
+(sing 2)
+(str 1)
+(str 1 2 "1asdfaj ")
+(defn verse
+  "Returns the nth verse of the song."
+  [num]
+  (if (= num 0)
+    (str "No more bottles of beer on the wall, no more bottles of beer.\n"
+      "Go to the store and buy some more, 99 bottles of beer on the wall.\n")
+    (if (= num 1)
+      (str num " bottle of beer on the wall, " num " bottles of beer.\n" 
+        "no bottles of beer on the wall.\n")
+      (str num " bottles of beer on the wall, " num " bottles of beer.\n" 
+        (dec num) " bottles of beer on the wall.\n")
+    )
+  )
+)
+(verse 2)
+(print (verse 2))
+(defn verse
+  "Returns the nth verse of the song."
+  [num]
+  (if (= num 0)
+    (str "No more bottles of beer on the wall, no more bottles of beer.\n"
+      "Go to the store and buy some more, 99 bottles of beer on the wall.\n")
+    (if (= num 1)
+      (str num " bottle of beer on the wall, " num " bottles of beer.\n" 
+        "Take it down and pass it around, no bottles of beer on the wall.\n")
+      (str num " bottles of beer on the wall, " num " bottles of beer.\n" 
+        "Take it down and pass it around, " (dec num) " bottles of beer on the wall.\n")
+    )
+  )
+)
+(verse 2)
+(print (verse 2))
+(defn verse
+  "Returns the nth verse of the song."
+  [num]
+  (if (= num 0)
+    (str "No more bottles of beer on the wall, no more bottles of beer.\n"
+      "Go to the store and buy some more, 99 bottles of beer on the wall.\n")
+    (if (= num 1)
+      (str num " bottle of beer on the wall, " num " bottles of beer.\n" 
+        "Take it down and pass it around, no bottles of beer on the wall.\n")
+      (if (= num 2)
+      (str num " bottles of beer on the wall, " num " bottles of beer.\n" 
+        "Take it down and pass it around, " (dec num) " bottle of beer on the wall.\n")
+      (str num " bottles of beer on the wall, " num " bottles of beer.\n" 
+        "Take it down and pass it around, " (dec num) " bottles of beer on the wall.\n")
+      )
+      
+    )
+  )
+)
+(defn sing
+  "Given a start and an optional end, returns all verses in this interval. If
+  end is not given, the whole song from start is sung."
+  ([start]
+    (sing start 0)
+  )
+  ([start end]
+    (map print (map verse (reverse (range end (inc start)))))
+  )
+)
+(sing 2)
